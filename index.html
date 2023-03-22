@@ -12,7 +12,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
@@ -117,12 +117,11 @@
                         <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
                         <form class="form-signup" id="contactForm">
                             <center><a href="https://forms.gle/BaT4LcVKvqAu72Tx9" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" id="submitButton" type="submit">Notify</button></a></center>
-                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                             <script>
                                 var formId = "1FAIpQLSfKVyOZlXQMFEtPJUDZFz5FphVcqLq8VIZeei8Dk1TPJKTBEw";
                                 
                                 // check if form has been submitted
-                                $.get("https://docs.google.com/forms/d/e/1FAIpQLSfKVyOZlXQMFEtPJUDZFz5FphVcqLq8VIZeei8Dk1TPJKTBEw/viewform?embedded=true", function(data) {
+                                $.get("https://docs.google.com/forms/d/e/" + formId + "/viewform?embedded=true", function(data) {
                                     if ($(data).find(".freebirdFormviewerViewResponseConfirmationMessage").length > 0) {
                                         disableButton();
                                         }
