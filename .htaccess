@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^explorer$ explorer.html [L]
